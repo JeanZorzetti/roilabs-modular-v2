@@ -1,0 +1,99 @@
+/* 🎨 ROI LABS - VARIÁVEIS GLOBAIS */
+
+:root {
+    --black: #000000;
+    --pure-black: #000000;
+    --dark-gray: #0a0a0a;
+    --medium-gray: #1a1a1a;
+    --light-gray: #2a2a2a;
+    --white: #ffffff;
+    --accent: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-tertiary: rgba(255, 255, 255, 0.5);
+    --transition-smooth: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background: var(--pure-black);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif;
+    color: var(--text-primary);
+    background: var(--pure-black);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilitários Globais */
+.section {
+    padding: 8rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 100;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin-bottom: 4rem;
+}
+
+/* Animações Globais */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade Global */
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 2rem;
+    }
+}
+
+/* Cursor Customizado */
+.cursor {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    backdrop-filter: invert(1);
+    mix-blend-mode: difference;
+}
+
+.cursor.hover {
+    transform: scale(1.5);
+    background: rgba(255, 255, 255, 0.1);
+}
