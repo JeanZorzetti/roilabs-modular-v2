@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI LABS - Inteligência Artificial de Luxo para Negócios</title>
+    <meta name="description" content="Não vendemos tecnologia. Entregamos tempo. IA premium que transforma cada conversa em relacionamento.">
+    
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    
+    <!-- CSS dos Componentes -->
+    <link rel="stylesheet" href="../components/navigation/styles.css">
+    <link rel="stylesheet" href="../components/hero/styles.css">
+    <link rel="stylesheet" href="../components/product-showcase/styles.css">
+    <link rel="stylesheet" href="../components/features/styles.css">
+    <link rel="stylesheet" href="../components/stats/styles.css">
+    <link rel="stylesheet" href="../components/testimonials/styles.css">
+    <link rel="stylesheet" href="../components/cta-footer/styles.css">
+</head>
+<body>
+    <!-- Cursor Customizado -->
+    <div class="cursor" id="cursor"></div>
+    
+    <!-- Componentes serão inseridos aqui -->
+    <!-- Navigation Component -->
+    <div id="navigation-component">
+        <!-- HTML do componente navigation será carregado aqui -->
+    </div>
+    
+    <!-- Hero Component -->
+    <div id="hero-component">
+        <!-- HTML do componente hero será carregado aqui -->
+    </div>
+    
+    <!-- Product Showcase Component -->
+    <div id="product-showcase-component">
+        <!-- HTML do componente product-showcase será carregado aqui -->
+    </div>
+    
+    <!-- Features Component -->
+    <div id="features-component">
+        <!-- HTML do componente features será carregado aqui -->
+    </div>
+    
+    <!-- Stats Component -->
+    <div id="stats-component">
+        <!-- HTML do componente stats será carregado aqui -->
+    </div>
+    
+    <!-- Testimonials Component -->
+    <div id="testimonials-component">
+        <!-- HTML do componente testimonials será carregado aqui -->
+    </div>
+    
+    <!-- CTA Footer Component -->
+    <div id="cta-footer-component">
+        <!-- HTML do componente cta-footer será carregado aqui -->
+    </div>
+    
+    <!-- JavaScript Global -->
+    <script src="../assets/js/global.js"></script>
+    
+    <!-- JavaScript dos Componentes -->
+    <script src="../components/navigation/script.js"></script>
+    <script src="../components/hero/script.js"></script>
+    <script src="../components/product-showcase/script.js"></script>
+    <script src="../components/features/script.js"></script>
+    <script src="../components/stats/script.js"></script>
+    <script src="../components/testimonials/script.js"></script>
+    <script src="../components/cta-footer/script.js"></script>
+    
+    <script>
+        // 🎯 SISTEMA DE CARREGAMENTO MODULAR
+        // Este script demonstra como carregar componentes dinamicamente
+        
+        const components = [
+            'navigation',
+            'hero', 
+            'product-showcase',
+            'features',
+            'stats',
+            'testimonials',
+            'cta-footer'
+        ];
+        
+        // Função para carregar HTML de componente
+        async function loadComponent(componentName) {
+            try {
+                const response = await fetch(`../components/${componentName}/component.html`);
+                const html = await response.text();
+                document.getElementById(`${componentName}-component`).innerHTML = html;
+            } catch (error) {
+                console.log(`Componente ${componentName} será carregado manualmente`);
+            }
+        }
+        
+        // Carregar todos os componentes
+        // components.forEach(loadComponent);
+        
+        console.log('🏗️ Template modular ROI LABS carregado');
+        console.log('📋 Próximo passo: Criar arquivos component.html individuais');
+    </script>
+</body>
+</html>
